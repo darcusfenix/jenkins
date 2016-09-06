@@ -1,114 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
-	<groupId>mx.iap.nmp.auxiliardeposito.mockservices.listservice</groupId>
-  	<artifactId>listservice</artifactId>
-	<name>Test Service - List</name>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<description>Servicios de Prueba para Integración con BackEnd</description>
+  
+  <groupId>mx.iap.nmp.auxiliardeposito</groupId>
+  <artifactId>mockservices</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Servicios de Prueba para Módulo de Auxiliar de Depósito</name>
+  <description>Servicios de Prueba para Integración con BackEnd</description>
   
   <properties>
-	<camel.version>2.17.0</camel.version>
-	<gson.version>2.6.2</gson.version>
-	<slf4j.version>1.7.21</slf4j.version>
-  	<java.version>1.8</java.version>
-	<service.main.class>ListService</service.main.class>
+	<java.version>1.8</java.version>
   </properties>
   
-  <dependencies>
-	<dependency>
-		<groupId>org.apache.camel</groupId>
-		<artifactId>camel-core</artifactId>
-		<version>${camel.version}</version>
-	</dependency>
-	<dependency>
-		<groupId>org.apache.camel</groupId>
-		<artifactId>camel-jetty</artifactId>
-		<version>${camel.version}</version>
-	</dependency>
-	
-	<dependency>
-	    <groupId>org.apache.camel</groupId>
-	    <artifactId>camel-mongodb</artifactId>
-	    <version>${camel.version}</version>
-	</dependency>
-	<dependency>
-	    <groupId>org.apache.camel</groupId>
-	    <artifactId>camel-jackson</artifactId>
-	    <version>${camel.version}</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>com.google.code.gson</groupId>
-		<artifactId>gson</artifactId>
-		<version>${gson.version}</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-api</artifactId>
-		<version>${slf4j.version}</version>
-	</dependency>
-	
-  </dependencies>
-  
-  <build>
-  	<finalName>listservice</finalName>
-	<plugins>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.5.1</version>
-			<configuration>
-				<source>${java.version}</source>
-				<target>${java.version}</target>
-			</configuration>
-		</plugin>
-        
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-assembly-plugin</artifactId>
-			<executions>
-				<execution>
-					<phase>package</phase>
-					<goals>
-						<goal>single</goal>
-					</goals>
-					<configuration>
-						<archive>
-							<manifest>
-								<mainClass>${service.main.class}</mainClass>
-							</manifest>
-<!-- 							<manifestEntries>
-                					<Class-Path>*</Class-Path>
-            				</manifestEntries> -->
-						</archive>
-						<descriptorRefs>
-							<descriptorRef>jar-with-dependencies</descriptorRef>
-						</descriptorRefs>
-					</configuration>
-				</execution>
-			</executions>
-		</plugin>
-		
-		<plugin>
-	        <groupId>org.apache.maven.plugins</groupId>
-	        <artifactId>maven-jar-plugin</artifactId>
-		<version>3.0.2</version>
-	        <executions>
-				<execution>
-					<phase>package</phase>
-			        <configuration>
-			          <archive>
-			            <manifest>
-			              <addClasspath>true</addClasspath>
-			            </manifest>
-			          </archive>
-			        </configuration>
-				</execution>
-			</executions>
-      </plugin>
-	</plugins>
-  </build>
+  <modules>
+  	<module>listservice</module>
+  </modules>
 </project>
