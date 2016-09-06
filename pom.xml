@@ -1,22 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  
-  <parent>
-    <groupId>mx.iap.nmp.auxiliardeposito</groupId>
-    <artifactId>mockservices</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  
-  <groupId>mx.iap.nmp.auxiliardeposito.mockservices</groupId>
-  <artifactId>listservice</artifactId>
-  <version>1</version>
-  <name>Test Service - List</name>
+
+	<groupId>mx.iap.nmp.auxiliardeposito.mockservices.listservice</groupId>
+  	<artifactId>listservice</artifactId>
+	<name>Test Service - List</name>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<description>Servicios de Prueba para Integración con BackEnd</description>
   
   <properties>
 	<camel.version>2.17.0</camel.version>
 	<gson.version>2.6.2</gson.version>
 	<slf4j.version>1.7.21</slf4j.version>
-  	
+  	<java.version>1.8</java.version>
 	<service.main.class>ListService</service.main.class>
   </properties>
   
