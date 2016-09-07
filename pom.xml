@@ -5,8 +5,8 @@
   <artifactId>mockservices</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>Servicios de Prueba para Módulo de Auxiliar de Depósito</name>
-  <description>Servicios de Prueba para Integración con BackEnd</description>
+  <name>integración continua</name>
+  <description>Pruebas con jenkins</description>
   
   <properties>
 	<java.version>1.8</java.version>
