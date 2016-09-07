@@ -88,7 +88,7 @@
             				</manifestEntries> -->
 						</archive>
 						<descriptorRefs>
-							<descriptorRef>0.0.1-SNAPSHOT</descriptorRef>
+							<descriptorRef>jar-with-dependencies</descriptorRef>
 						</descriptorRefs>
 					</configuration>
 				</execution>
