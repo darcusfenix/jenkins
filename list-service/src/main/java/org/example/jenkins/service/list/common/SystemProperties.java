@@ -1,4 +1,4 @@
-package mx.iap.nmp.auxiliardeposito.mockservices.listservice.common;
+package org.example.jenkins.service.list.common;
 
 import java.io.FileInputStream;
 import java.io.InputStream;

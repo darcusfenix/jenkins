@@ -1,4 +1,4 @@
-package mx.iap.nmp.auxiliardeposito.mockservices.listservice.common.util;
+package org.example.jenkins.service.list.common.util;
 
 import com.google.gson.Gson;
 

@@ -1,10 +1,8 @@
-package mx.iap.nmp.auxiliardeposito.mockservices.listservice.route;
+package org.example.jenkins.service.list.route;
 
-import mx.iap.nmp.auxiliardeposito.mockservices.listservice.common.SystemProperties;
-import mx.iap.nmp.auxiliardeposito.mockservices.listservice.processor.ExceptionProcessor;
-
-import static mx.iap.nmp.auxiliardeposito.mockservices.listservice.common.SystemConstants.LIST_SERVICE_HOST_PROPERTY;
-import static mx.iap.nmp.auxiliardeposito.mockservices.listservice.common.SystemConstants.LIST_SERVICE_PORT_PROPERTY;
+import org.example.jenkins.service.list.common.SystemProperties;
+import org.example.jenkins.service.list.common.SystemConstants;
+import org.example.jenkins.service.list.processor.ExceptionProcessor;
 
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
@@ -25,8 +23,8 @@ public class BaseRoute extends RouteBuilder {
 		restConfiguration()
 			.component(JETTY_COMPONENT_ID)
 			.componentProperty(RESTRICT_PROPERTY_KEY, RESTRICT_PROPERTY_VALUE)
-			.host(SystemProperties.getProperty(LIST_SERVICE_HOST_PROPERTY))
-			.port(SystemProperties.getProperty(LIST_SERVICE_PORT_PROPERTY))
+			.host(SystemProperties.getProperty(SystemConstants.LIST_SERVICE_HOST_PROPERTY))
+			.port(SystemProperties.getProperty(SystemConstants.LIST_SERVICE_PORT_PROPERTY))
 			.bindingMode(RestBindingMode.auto);
 	}
 }

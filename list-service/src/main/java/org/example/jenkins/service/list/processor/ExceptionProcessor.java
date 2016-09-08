@@ -1,13 +1,12 @@
-package mx.iap.nmp.auxiliardeposito.mockservices.listservice.processor;
-
-import static mx.iap.nmp.auxiliardeposito.mockservices.listservice.common.SystemConstants.SYSTEM_BAD_RESPONSE_CODE;
+package org.example.jenkins.service.list.processor;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 
-import mx.iap.nmp.auxiliardeposito.mockservices.listservice.common.datatransfer.SystemResponseDTO;
-import mx.iap.nmp.auxiliardeposito.mockservices.listservice.common.util.JSONUtil;
-import mx.iap.nmp.auxiliardeposito.mockservices.listservice.common.util.ProcessorUtil;
+import org.example.jenkins.service.list.common.datatransfer.SystemResponseDTO;
+import org.example.jenkins.service.list.common.util.JSONUtil;
+import org.example.jenkins.service.list.common.util.ProcessorUtil;
+import org.example.jenkins.service.list.common.SystemConstants;
 
 public class ExceptionProcessor implements Processor {
 	@Override
@@ -16,7 +15,7 @@ public class ExceptionProcessor implements Processor {
 		SystemResponseDTO response =
 				new SystemResponseDTO(
 						exchange.getProperty(Exchange.EXCEPTION_CAUGHT, String.class),
-						SYSTEM_BAD_RESPONSE_CODE);
+						SystemConstants.SYSTEM_BAD_RESPONSE_CODE);
 		
 		// Log the in and out
 		System.out.println("Request: " + exchange.getIn().getBody(String.class) + "\nResponse: " + response);

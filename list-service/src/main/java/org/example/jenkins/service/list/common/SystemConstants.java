@@ -1,4 +1,4 @@
-package mx.iap.nmp.auxiliardeposito.mockservices.listservice.common;
+package org.example.jenkins.service.list.common;
 
 public class SystemConstants {
 	public static final String SYSTEM_PROPERTIES_FILE_NAME = "conf/system.properties";

@@ -1,4 +1,4 @@
-package mx.iap.nmp.auxiliardeposito.mockservices.listservice.common.datatransfer;
+package org.example.jenkins.service.list.common.datatransfer;
 
 public class SystemResponseDTO {
 	private String description;
